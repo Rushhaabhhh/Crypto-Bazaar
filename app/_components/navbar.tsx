@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Web3 from 'web3';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
-import logo from "../../public/file.svg";
+import logo from "../../public/logo.png";
 import { WalletIcon, Search, User } from 'lucide-react';
 import Image from 'next/image';
 
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
   const handleLogout = async (): Promise<void> => {
     try {
       await axios.post('https://tradexchange-7rcv.onrender.com/user/logout'); 
-      router.push('/'); // Use router.push for navigation
+      router.push('/dashboard'); 
     } catch (error) {
       console.error('Error logging out:', error);
     }
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
           </a>
           <div className="border-l-2 border-white h-6"></div>
           <button
-            onClick={() => router.push('/create')} // Navigate with router.push
+            onClick={() => router.push('/create')} 
             className="text-white text-2xl hover:text-opacity-80"
           >
             Create

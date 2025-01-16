@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'radial-green-tl': 'radial-gradient(circle at top left, green, transparent)',
+        'radial-green-br': 'radial-gradient(circle at bottom right, green, transparent)',
+      },
     },
   },
   plugins: [],
